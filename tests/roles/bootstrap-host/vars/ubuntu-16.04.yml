@@ -21,7 +21,7 @@ packages_install:
   - ethtool
   - git-core
   - ipython
-  - linux-modules-extra-{{ ansible_kernel }}
+  - "{% if hostvars[inventory_hostname]['ansible_kernel'] | version_compare('4.4.0-143', '>=') %}linux-modules-extra-{{ ansible_kernel }}{% else %}linux-image-extra-{{ ansible_kernel }}{% endif %}"
   - lvm2
   - python2.7
   - python-dev
