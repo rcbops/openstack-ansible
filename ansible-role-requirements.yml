@@ -44,8 +44,8 @@
   version: newton-eol
 - name: openstack_hosts
   scm: git
-  src: https://git.openstack.org/openstack/openstack-ansible-openstack_hosts
-  version: newton-eol
+  src: https://github.com/rcbops/openstack-ansible-openstack_hosts
+  version: stable/newton
 - name: os_keystone
   scm: git
   src: https://git.openstack.org/openstack/openstack-ansible-os_keystone
